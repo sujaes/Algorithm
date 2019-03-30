@@ -22,3 +22,22 @@ public class Q2869 {
 		System.out.println(day);
 	}
 }
+//시간초과안나는 코드
+//import java.util.Scanner;
+//class Main{
+//	static long a,b,v;
+//	public static void main(String[] args){
+//		Scanner sc = new Scanner(System.in);
+//		a = sc.nextLong();
+//		b = sc.nextLong();
+//		v = sc.nextLong();
+//		long sum= 0;
+//		long cnt=0;
+//		if((v-a) % (a-b)>0){
+//			cnt = (v-a) /(a-b)+2;
+//		}else{
+//			cnt = (v-a)/(a-b)+1;
+//		}
+//		System.out.println(cnt);
+//	}
+//}
