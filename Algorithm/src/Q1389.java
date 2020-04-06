@@ -49,6 +49,7 @@ public class Q1389 {
                 ans = i;
             }
         }
+        System.out.println("");
         System.out.println(ans);
     }
  
