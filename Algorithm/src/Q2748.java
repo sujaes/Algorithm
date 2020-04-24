@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Q2748 {
 
@@ -22,3 +22,4 @@ public class Q2748 {
 	}
 	
 }
+
