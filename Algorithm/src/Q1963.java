@@ -25,7 +25,6 @@ public class Q1963{
 		q.offer(s);
 		visited[s] = true;
 		while(!q.isEmpty()){
-//			System.out.println("qªÁ¿Ã¡Ó = " + q.size());
 			int num = q.poll();
 			if(num==e){
 				check = true;
@@ -41,8 +40,6 @@ public class Q1963{
 					int temp = Integer.parseInt(sb.toString());
 					if(list.contains(temp) && !visited[temp]){
 						dp[temp] = dp[num]+1;
-//						System.out.println("temp  = " + temp);
-//						System.out.println("dp[temp] = "+ dp[temp]);
 						visited[temp] = true;
 						q.add(temp);
 						
