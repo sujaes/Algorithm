@@ -1,71 +1,52 @@
-//import java.util.ArrayList;
-//import java.util.Collections;
-//import java.util.Comparator;
-//import java.util.List;
-//import java.util.Scanner;
-//
-//public class Main {
-//
-//	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//		List<String> filter = new ArrayList<String>();
-//		List<Dic> list = new ArrayList<Dic>();
-//		Dic dic;
-//		String temp;
-//		int n = sc.nextInt();
-//		
-//		for(int i = 0 ; i < n ; i++) {
-//			temp = sc.next();
-//			if(!filter.contains(temp)) {
-//				filter.add(temp);
-//			}
-//		}
-//		
-//		
-//		for(int i = 0 ; i < filter.size() ; i++) {
-//			dic = new Dic(filter.get(i).length(),filter.get(i));
-//			list.add(dic);
-//		}
-//		
-//		Com comp = new Com();
-//		Collections.sort(list,comp);
-//		
-//		
-//		for(int i = 0 ; i < list.size();i++) {
-//			System.out.println(list.get(i).word);
-//		}
-//		
-//	}
-//
-//}
-//class Dic{
-//	int length;
-//	String word;
-//	public Dic(int length, String word) {
-//		this.word = word;
-//		this.length = length;
-//	}
-//}
-//
-//class Com implements java.util.Comparator<Dic>{
-//
-//	@Override
-//	public int compare(Dic o1, Dic o2) {
-//		// TODO Auto-generated method stub
-//		if(o1.length > o2.length) {
-//			return 1;
-//		}else if(o1.length < o2.length) {
-//			return -1;
-//		}else {
-//			if(o1.word.compareTo(o2.word)>0) {
-//				return 1;
-//			}else if(o1.word.compareTo(o2.word)<0) {
-//				return -1;
-//			}else {
-//				return 0;
-//			}
-//		}
-//
-//	}
-//	
-//}
+import java.util.Scanner;
+ 
+public class Main {
+    
+    public static final int START = 1;
+    public static final int END = 3;
+    
+    public static int len;
+    public static int[] arr;
+    public static boolean is_end = false;
+    
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        
+        len = sc.nextInt();
+        
+        arr = new int[len];
+        
+        backtracking("");
+    }
+    
+    public static void backtracking(String str) {
+        if(is_end) {
+        	return;
+        } 
+        if(str.length() == len) {
+            System.out.println(str);
+            is_end = true;
+            
+            return;
+        }
+        
+        for(int i= START; i <= END; i++) {
+            if(isAble(str+i)) {
+                backtracking(str+i);
+            }
+        }
+    }
+    public static boolean isAble(String str) {
+        int len = str.length();
+        for(int i = 1; i <= len/2; i++) {
+            String front_str = str.substring(str.length()-i-i, str.length()-i);
+            String behind_str = str.substring(str.length()-i, str.length());
+            if(front_str.equals(behind_str)) {
+            	return false;
+            } 
+        }
+        
+        return true;
+    }
+}
+
