@@ -1,4 +1,4 @@
-class Solution {
+class Pkakaolevel1_03 {
   public int solution(String dartResult) {
       int k = 0 ; 
       int temp[] = new int[3];

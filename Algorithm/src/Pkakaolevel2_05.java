@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution{
+class Pkakaolevel2_05{
   public String solution(String m, String[] musicinfos) {
       
       int len[] = new int[musicinfos.length];

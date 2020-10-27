@@ -1,4 +1,4 @@
-class Solution {
+class Pkakaolevel2_02 {
     int answer = 1001;	                                //문자열 길이
     String res = "";
     public int solution(String s) {

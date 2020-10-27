@@ -1,5 +1,5 @@
 import java.util.Stack;
-class Solution {
+class Pkakaolevel1_01 {
     public static Stack<Integer> stack = new Stack<Integer>();
     public static int answer = 0;
     public int solution(int[][] board, int[] moves) {

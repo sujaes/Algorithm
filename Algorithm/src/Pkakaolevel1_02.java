@@ -1,4 +1,4 @@
-class Solution {
+class Pkakaolevel1_02 {
     public String solution(int[] numbers, String hand) {
         int leftnow = 10;
         int rightnow = 12;

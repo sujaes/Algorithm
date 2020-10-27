@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {
+class P1829 {
     static Queue<Pair> q;
     static int max = 0;
     static int num = 0;

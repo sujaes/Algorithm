@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Solution {
+class Pkakaolevel2_04 {
     public int[] solution(String s) {
         int[] answer;
         Map<String ,Integer> map = new HashMap<String,Integer>();

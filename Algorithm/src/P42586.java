@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-class Solution {
+class P42586 {
 
 	public int[] solution(int[] progresses, int[] speeds) {
 

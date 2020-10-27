@@ -2,7 +2,7 @@
 
 import java.util.Stack;
 
-class Solution {
+class Pkakaolevel2_01 {
     int index =0 ;
     public String solution(String p) {
         if(p.equals("")){
