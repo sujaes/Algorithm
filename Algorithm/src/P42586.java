@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.LinkedList;
 
 class P42586 {
@@ -35,7 +34,6 @@ class P42586 {
 		return answer;
 	}
 }
-=======
 //import java.util.LinkedList;
 //
 //class Solution {
@@ -72,4 +70,3 @@ class P42586 {
 //		return answer;
 //	}
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Pkakaolevel1_02 {
     public String solution(int[] numbers, String hand) {
         int leftnow = 10;
@@ -70,7 +69,6 @@ class Node{
         this.y = y;
     }
 }
-=======
 //class Solution {
 //    public String solution(int[] numbers, String hand) {
 //        int leftnow = 10;
@@ -142,4 +140,3 @@ class Node{
 //        this.y = y;
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

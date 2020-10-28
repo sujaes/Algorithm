@@ -156,4 +156,3 @@
 //        this.color = color;
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.*;
 class Pkakaolevel2_05{
   public String solution(String m, String[] musicinfos) {
@@ -102,7 +101,6 @@ class Pkakaolevel2_05{
       return answer;
   }
 }
-=======
 //import java.util.*;
 //class Solution{
 //  public String solution(String m, String[] musicinfos) {
@@ -206,4 +204,3 @@ class Pkakaolevel2_05{
 //      return answer;
 //  }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

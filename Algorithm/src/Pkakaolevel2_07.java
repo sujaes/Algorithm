@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Pkakaolevel2_07 {
   static int[] dx = {0,0,1,1};
   static int[] dy = {0,1,0,1};
@@ -89,7 +88,6 @@ class Pkakaolevel2_07 {
       return answer;
   } 
 }
-=======
 //class Solution {
 //  static int[] dx = {0,0,1,1};
 //  static int[] dy = {0,1,0,1};
@@ -180,4 +178,3 @@ class Pkakaolevel2_07 {
 //      return answer;
 //  } 
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

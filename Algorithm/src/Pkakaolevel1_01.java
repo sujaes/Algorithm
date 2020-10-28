@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.Stack;
 class Pkakaolevel1_01 {
     public static Stack<Integer> stack = new Stack<Integer>();
@@ -39,7 +38,6 @@ class Pkakaolevel1_01 {
         return board;                                   //인형이 아무것도 없을때
     }
 }
-=======
 //import java.util.Stack;
 //class Solution {
 //    public static Stack<Integer> stack = new Stack<Integer>();
@@ -80,4 +78,3 @@ class Pkakaolevel1_01 {
 //        return board;                                   //인형이 아무것도 없을때
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

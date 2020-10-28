@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Pkakaolevel1_03 {
   public int solution(String dartResult) {
       int k = 0 ; 
@@ -48,7 +47,6 @@ class Pkakaolevel1_03 {
       return answer;
   }
 }
-=======
 //class Solution {
 //  public int solution(String dartResult) {
 //      int k = 0 ; 
@@ -98,4 +96,3 @@ class Pkakaolevel1_03 {
 //      return answer;
 //  }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git
