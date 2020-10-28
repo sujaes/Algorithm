@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Pkakaolevel2_06 {
 	static char[] replaceNum = {'A','B','C','D','E','F'}; 
     public String solution(int n, int t, int m, int p) {
@@ -45,7 +44,6 @@ class Pkakaolevel2_06 {
         }
     }
 }
-=======
 //class Solution {
 //	static char[] replaceNum = {'A','B','C','D','E','F'}; 
 //    public String solution(int n, int t, int m, int p) {
@@ -92,4 +90,3 @@ class Pkakaolevel2_06 {
 //        }
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

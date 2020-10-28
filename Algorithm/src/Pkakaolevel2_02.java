@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Pkakaolevel2_02 {
     int answer = 1001;	                                //문자열 길이
     String res = "";
@@ -52,7 +51,6 @@ class Pkakaolevel2_02 {
 		return res;
     }
 }
-=======
 //class Solution {
 //    int answer = 1001;	                                //문자열 길이
 //    String res = "";
@@ -106,4 +104,3 @@ class Pkakaolevel2_02 {
 //		return res;
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

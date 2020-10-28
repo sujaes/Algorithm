@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.*;
 class P42583 {
     static Queue<Truck> q = new LinkedList<Truck>();
@@ -49,7 +48,6 @@ class Truck{
         this.truck_weight = truck_weight;
     }
 }
-=======
 //import java.util.*;
 //class Solution {
 //    static Queue<Truck> q = new LinkedList<Truck>();
@@ -100,4 +98,3 @@ class Truck{
 //        this.truck_weight = truck_weight;
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

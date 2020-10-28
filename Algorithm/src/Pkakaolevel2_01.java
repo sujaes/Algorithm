@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*카카오  괄호변환*/
 
 import java.util.Stack;
@@ -54,7 +53,6 @@ class Pkakaolevel2_01 {
         
     }
 }
-=======
 ///*카카오  괄호변환*/
 //
 //import java.util.Stack;
@@ -110,4 +108,3 @@ class Pkakaolevel2_01 {
 //        
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git

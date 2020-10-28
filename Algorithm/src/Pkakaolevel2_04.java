@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -36,7 +35,6 @@ class Pkakaolevel2_04 {
         return answer;
     }
 }
-=======
 //import java.util.ArrayList;
 //import java.util.Collections;
 //import java.util.Comparator;
@@ -74,4 +72,3 @@ class Pkakaolevel2_04 {
 //        return answer;
 //    }
 //}
->>>>>>> branch 'master' of https://github.com/sujaes/Algorithm.git
