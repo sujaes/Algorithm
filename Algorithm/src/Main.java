@@ -74,5 +74,6 @@ class Main {
 		
 		System.out.println(s1Idx + " " +s2Idx);
 		return count;
+		
 	}
 }
