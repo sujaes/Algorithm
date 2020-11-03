@@ -84,3 +84,88 @@ public class Q2667 {
     	}
     }
 }
+
+
+
+
+
+
+
+
+
+//import java.util.Arrays;
+//import java.util.Scanner;
+//
+//public class Main {
+//	static int n;
+//	static int arr[][];
+//	static boolean visited[][];
+//	static int dx[] = {0,0,1,-1};
+//	static int dy[] = {1,-1,0,0};
+//	static int count ;
+//	static int num;
+//	static int answer[];
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		n = sc.nextInt();
+//		arr = new int[n][n];
+//		visited = new boolean[n][n];
+//		answer = new int[n*n];
+//		num = 1;
+//		count = 2;
+//		for(int i = 0 ; i < n ; i++) {
+//			String s = sc.next();
+//			for(int j = 0 ; j <n ; j++) {
+//				arr[i][j] = Integer.parseInt(s.charAt(j)+"");
+//			}
+//		}
+//		
+//		for(int i = 0 ; i < n ; i++) {
+//			for(int j = 0 ; j <n ; j++) {
+//				if(arr[i][j] ==1 ) {
+//					visited[i][j] = true;
+//					dfs(new Node(i,j));
+//					answer[count-2] = num;
+//					num = 1;
+//					count++;
+//				}
+//			}
+//		}
+//		int arrAnswer[] = new int[count-2];
+//		for(int i = 0 ; i < count-2 ;i++) {
+//			arrAnswer[i]=answer[i]; 
+//		}
+//		
+//		System.out.println(count -2);
+//		Arrays.sort(arrAnswer);
+//		for(int i = 0 ; i < count -2; i++) {
+//			System.out.println(arrAnswer[i]);
+//		}
+//		
+//	}
+//	
+//	public static void dfs(Node node) {
+//		int x = node.x;
+//		int y = node.y;
+//		for(int i =0; i < 4 ; i++) {
+//			int nx = x + dx[i];
+//			int ny = y + dy[i];
+//			if(nx < 0 || ny< 0 || nx>=n|| ny>=n) {
+//				continue;
+//			}
+//			if(arr[nx][ny]==1 && !visited[nx][ny]) {
+//				arr[nx][ny] = count;
+//				num++;
+//				dfs(new Node(nx,ny));
+//			}
+//		}
+//	}
+//}
+//class Node{
+//	int x;
+//	int y;
+//	public Node(int x, int y) {
+//		this.x = x;
+//		this.y = y;
+//	}	
+//}
