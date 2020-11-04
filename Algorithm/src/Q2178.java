@@ -20,7 +20,7 @@ public class Q2178 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        n = sc.nextInt();
+        n = sc.nextInt();	
         arr = new int[n][n];
         visited = new boolean[n][n];
         list = new ArrayList<Integer>();
