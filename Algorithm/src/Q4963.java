@@ -51,7 +51,6 @@ public class Q4963 {
 				dfs(nx, ny);
 			}
 		}
-    	
     }
 }
 
