@@ -17,7 +17,7 @@ public class Q1002{
         }
         for (int i = 0 ; i < T ; i++)
             System.out.println(res[i]);
-
+ 
         sc.close();
     }
 
