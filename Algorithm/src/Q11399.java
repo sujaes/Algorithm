@@ -20,6 +20,5 @@ class Q11399 {
     		sum += temp;
     	}
     	System.out.println(sum);
-    	
     }
 }
