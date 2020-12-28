@@ -21,6 +21,7 @@ public class Q1963{
 		}
 	}
 	
+	
 	public static void bfs(int s,int e){
 		q.offer(s);
 		visited[s] = true;
