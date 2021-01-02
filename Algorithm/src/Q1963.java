@@ -33,7 +33,7 @@ public class Q1963{
 			}
 			for(int i = 0 ; i <4; i++){
 				for(int j=0;j<=9;j++){
-					if(i==0 && j==0){
+					if(i==0 && j==0){	//첫숫자 0 이면 1000미만이므로X
 						continue;
 					}
 					StringBuilder sb= new StringBuilder(String.valueOf(num));
