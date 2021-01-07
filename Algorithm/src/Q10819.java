@@ -20,7 +20,7 @@ public class Q10819 {
         System.out.println(max);
     
     }
-    //순열 알고리즘(팩토리얼)
+    //순열 알고리즘
     public static void f(int[] arr, int d){
         
         if(d == N){
