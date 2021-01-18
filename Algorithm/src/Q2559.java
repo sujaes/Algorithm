@@ -9,19 +9,26 @@ public class Q2559 {
 		int s = 0;
 		int e = 0;
 		int max = Integer.MIN_VALUE;
-		
+		int sum =0;
 		
 		for(int i = 0 ; i < N; i++) {
 			arr[i] = sc.nextInt();
 		}
 		
-		for(int i = 0 ; i < N - K ; i++) {
-			int sum = 0;
-			for(int j = i ; j <i+K;j++) {
-				sum = sum + arr[j];
-			}
-			max = Math.max(sum,max);	
+		for(;e < K;e++) {
+			sum =  sum + arr[e];
 		}
+		max = Math.max(max,sum);
+		
+		for(;e < N;e++) {
+			sum = sum - arr[s];
+			s++;
+			sum = sum + arr[e];
+			max = Math.max(sum, max);
+		}
+		
+		
+		
 		System.out.println(max);
 		
 	}
