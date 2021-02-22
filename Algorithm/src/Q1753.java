@@ -60,16 +60,17 @@ class Q1753 {
         	
     	
     }
+    public static class Node implements Comparable<Node>{
+    	int e,w;
+    	public Node(int e,int w) {		
+    		this.e=e;
+    		this.w=w;
+    	}
+    	public int compareTo(Node o) {
+    		return this.w - o.w;
+    	}
+    }
+
 }
 
 
-class Node implements Comparable<Node>{
-	int e,w;
-	public Node(int e,int w) {		
-		this.e=e;
-		this.w=w;
-	}
-	public int compareTo(Node o) {
-		return this.w - o.w;
-	}
-}
