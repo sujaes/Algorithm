@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.*;
  
 public class Q1197 {
@@ -9,12 +7,10 @@ public class Q1197 {
     static int result = 0;
     
     public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        
-        n = Integer.parseInt(st.nextToken());
-        m = Integer.parseInt(st.nextToken());
+        Scanner sc = new Scanner(System.in);
+            
+        n = sc.nextInt();
+        m = sc.nextInt();
         
         parent = new int[n+1];
         
@@ -23,8 +19,7 @@ public class Q1197 {
         }
         
         for(int i=0; i<m; i++) {
-            st = new StringTokenizer(br.readLine());
-            pq.add(new edge(Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken())));
+            pq.add(new edge(sc.nextInt(), sc.nextInt(), sc.nextInt()));
         }
         
         //시작점과 종료점의 최상위 노드를 찾아서 겹치면 사이클이 생기는 것이므로 continue를 한다.
@@ -78,6 +73,6 @@ class edge implements Comparable<edge>{
     @Override
     public int compareTo(edge arg0) {
         // TODO Auto-generated method stub
-        return arg0.v >= this.v ? -1:1;
+        return  this.v - arg0.v;
     }
 }
