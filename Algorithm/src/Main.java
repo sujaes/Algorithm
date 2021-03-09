@@ -1,79 +1,111 @@
 import java.util.*;
-class Main {
-	static List<Integer> list = new ArrayList<Integer>();
-	static int s1[] = {1,1,3,3,3,6};
-	static int s2[] = {6,3,1,3,1,3};
-	static int count = 0;
-	static int s1Idx = 0;
-	static int s2Idx = 0;
-	public static void main(String[] args) {
-    	int answer[] = new int[2];
-    	int n = 0;
-    	int min = Integer.MAX_VALUE;
-    	for(int i = 0 ; i < s1.length;i++) {
-    		if(list.contains(s1[i])) {
-    			continue;
-    		}else {
-    			list.add(s1[i]);
-    		}
-    	}
-    	Collections.sort(list);
-    	
-    	for(int i = 0 ; i < list.size();i++) {
-    		n = list.get(i);
-    		count = 0;
-    		s1Idx = 0;
-    		s2Idx = 0;
-    		int temp = solution(n);
-    		if(min > temp) {
-    			min = temp;
-    		}
-    	}
-    	answer[0] = n;
-    	answer[1] = min;
-    	System.out.println(answer[0] + " " +answer[1]);
+/*
+ * Date 2021.03.08
+ * author 장수제
+ * 순열,중복순열,조합,중복조합 코드정리
+ */
+public class Main {
+    static int n,r; //크기
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        r = sc.nextInt();
+        
+        //순열
+        System.out.println("***순열 출력***");
+        LinkedList<Integer> perArr = new LinkedList<Integer>();
+        int perCheck[] = new int[n];
+        permutation(n,r,perArr,perCheck);
+        
+        //중복순열
+        System.out.println("***중복순열 출력***");
+        LinkedList<Integer> rePerArr = new LinkedList<Integer>();
+        rePermutation(n,r,rePerArr);
+        
+        //조합
+        System.out.println("***조합 출력***");
+        int comArr[] = new int[r];
+        combination(n,r,comArr,0,0);
+        
+        //중복조합
+        System.out.println("***중복조합 출력***");
+        int reComArr[] = new int[r];
+        reCombination(n,r,reComArr,0,0);
     }
-	public static int solution(int a) {
-		if(s1Idx == s1.length || s2Idx ==s1.length) {
-			return count;
-		}
-		
-		for(int i = 0 ; i < s1.length;i++) {
-			if( (s1Idx == s2Idx) && (i==s1.length-1)) {
-				return count;
-			}else {
-				break;
-			}
-		}
-		
+    
+    //순열 코드
+    public static void permutation(int n , int r , LinkedList<Integer> perArr , int perCheck[]) {
+    	//r개를 모두 다 뽑아서 리스트에 있는것을 출력하고 종료 
+    	if(perArr.size()== r) {
+    		for(int i =0 ; i < perArr.size();i++) {
+    			System.out.print(perArr.get(i));
+    		}
+    		System.out.println();
+    		return;
+    	}
+    	//r개를 뽑았다 안뽑았다 하면서 추가(재귀)
+    	for(int i = 0 ; i < n ;i++) {
+    		if(perCheck[i] == 0) {
+    			perArr.add(i);
+    			perCheck[i] = 1;
+    			permutation(n, r, perArr, perCheck);
+    			perCheck[i] = 0;
+    			perArr.removeLast();
+    		}
+    	}
+    }
 
-		for(int i = s1Idx ; i < s1.length;i++) {
-			if(s1[i] == a) {
-				s1Idx = i;
-				break;
-			}
-		}
-		
-		for(int i = s2Idx ; i < s2.length;i++) {
-			if(s2[i] == a) {
-				s2Idx = i;
-				break;
-			}
-		}
-		
-		if(s1Idx == s2Idx) {
-			s1Idx++;
-			s2Idx++;
-			solution(a);
-		}else {
-			count = count + Math.abs(s1Idx - s2Idx);
-			s1Idx++;
-			s2Idx++;
-			solution(a);
-		}
-		
-		System.out.println(s1Idx + " " +s2Idx);
-		return count;
-		
-	}
+    //중복순열 코드(자기자신 포함하는 순열)
+    public static void rePermutation(int n , int r , LinkedList<Integer> rePerArr) {
+    	//r개를 모두 다 뽑아서 리스트에 있는것을 출력하고 종료 
+    	if(rePerArr.size()== r) {
+    		for(int i =0 ; i < rePerArr.size();i++) {
+    			System.out.print(rePerArr.get(i));
+    		}
+    		System.out.println();
+    		return;
+    	}
+    	//r개를 뽑았다 안뽑았다 하면서 추가(재귀)
+    	for(int i = 0 ; i < n ;i++) {
+  			rePerArr.add(i);
+   			rePermutation(n, r, rePerArr);
+   			rePerArr.removeLast();
+    	}
+    }
+    
+    
+    //조합 코드
+    public static void combination(int n , int r , int comArr[] , int index , int target) {
+    	if(r==0) {
+    		for(int i = 0 ; i < comArr.length;i++) {
+    			System.out.print(comArr[i] + " ");
+    		}
+    		System.out.println();
+    		return;
+    	}
+    	if(target == n) {
+    		return;
+    	}   	
+    	comArr[index] = target;
+    	combination(n, r-1, comArr, index+1, target+1); //뽑는경우
+    	combination(n, r  , comArr, index  , target+1);//안뽑는경우
+    }
+    
+    //중복조합 코드
+    public static void reCombination(int n , int r , int reComArr[] , int index, int target) {
+    	if(r == 0) {
+    		for(int i = 0 ; i < reComArr.length;i++) {
+    			System.out.print(reComArr[i] + " ");
+    		}
+    		System.out.println();
+    		return;
+    	}
+    	if(target == n) {
+    		return;
+    	}
+    	reComArr[index] = target;
+    	reCombination(n, r-1, reComArr, index+1, target);
+    	reCombination(n, r  , reComArr, index  , target+1);
+    	
+    }
 }
