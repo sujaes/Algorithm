@@ -64,3 +64,73 @@
 //    
 //    
 //}
+
+
+
+//import java.util.*;
+//
+//class Solution {
+//    static int count = 0;
+//    static int arr[];
+//    static ArrayList<Integer> cont = new ArrayList<Integer>();
+//    public int solution(String numbers) {
+//        LinkedList<Integer> list = new LinkedList<Integer>();
+//        int check[] = new int[numbers.length()];
+//        arr = new int[numbers.length()];
+//        for(int i = 0 ; i < numbers.length();i++){
+//            arr[i] = Integer.parseInt(numbers.charAt(i)+"");
+//        }
+//        for(int i = 1 ; i <= numbers.length();i++){
+//            System.out.println(i+"자리 구하기");
+//            perm(numbers.length(),i,list,check);
+//        }
+//        return count;
+//    }
+//    
+//    public boolean isPrime(int num){
+//        if(num == 0 || num ==1){
+//            return false;
+//        }
+//        System.out.println(num);
+//        for (int i = 2; i < num; i++) {
+//            // 1과 num 자신 외에 나누어지는 수가 있는지 검사할 조건문
+//            if (num % i == 0) {
+//                // 나누어지는 수가 있을 경우 isPrime의 값을 true로 바꾼다.
+//                return false;
+//                // 한 번이라도 이 조건문이 실행될 경우 num은 소수가 아니므로 반복문을 빠져나온다.
+//            }
+//        }
+//        return true;
+//    }
+//    
+//    public void perm(int n, int r, LinkedList<Integer> list, int check[]){
+//        String temp = "";
+//        if(list.size() == r){
+//            for(int i = 0 ; i < r; i++){
+//                temp += list.get(i)+"";
+//            }
+//            if(temp.charAt(0) == '0'){
+//                return;
+//            }
+//            int checkValue = Integer.parseInt(temp);
+//            
+//            if(cont.contains(checkValue)){
+//                return;
+//            }else{
+//                cont.add(checkValue);
+//                if(isPrime(checkValue)){
+//                    count++;
+//                }
+//            }
+//        }
+//        for(int i = 0 ; i < n ;i++){
+//            if(check[i]==0){
+//                check[i] = 1;
+//                list.add(arr[i]);
+//                perm(n,r,list,check);
+//                list.removeLast();
+//                check[i] = 0;
+//            }
+//        }      
+//    }
+//}
