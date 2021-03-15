@@ -10,7 +10,7 @@
 //           set.add(i);
 //       } 
 //
-//       for (int i=1; i<=set.size(); i++) {
+//       for (int i=1; i<=A.length; i++) {
 //           if (!set.contains(i)) {
 //               result = 0;
 //               break;
