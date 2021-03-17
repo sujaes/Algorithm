@@ -24,25 +24,29 @@
 //		// 요청이 모두 수행될 때까지 반복
 //		while (count < jobs.length) {
 //
-//			// 하나의 작업이 완료되는 시점(end)까지 들어온 모든 요청을 큐에 넣음
+//			// 하나의 작업이 완료되는 시점까지 들어온 모든 요청을 큐에 넣음
 //			while (jobsIdx < jobs.length && jobs[jobsIdx][0] <= end) {
+//                System.out.println("완료전까지 큐에 삽입하기 "+jobs[jobsIdx][0] + " "+jobs[jobsIdx][1] );
 //				pq.add(jobs[jobsIdx++]);
 //			}
 //
-//			// 큐가 비어있다면 작업 완료(end) 이후에 다시 요청이 들어온다는 의미
-//			// (end를 요청의 가장 처음으로 맞춰줌)
+//			// 큐가 비어있다면 작업 완료 이후에 다시 요청이 들어온다는 의미
 //			if (pq.isEmpty()) {
 //				end = jobs[jobsIdx][0];
+//                System.out.println("큐가 비어있음 end = " + end);
 //
-//			// 작업이 끝나기 전(end 이전) 들어온 요청 중 가장 수행시간이 짧은 요청부터 수행
+//			// 작업이 끝나기 전 들어온 요청 중 가장 수행시간이 짧은 요청부터 수행
 //			} else {
 //				int[] temp = pq.poll();
-//				answer += temp[1] + end - temp[0];
+//                System.out.println(temp[0] + " " + temp[1] + "부터 수행");
+//                System.out.println("이전 end = " + end);
+//				answer += temp[1] - temp[0] + end;
 //				end += temp[1];
+//                System.out.println("이후 end = " + end);
 //				count++;
 //			}
-//		}
-//
+//		
+//        }
 //		return (int) Math.floor(answer / jobs.length);
 //	}
 //}
