@@ -1,24 +1,21 @@
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q1300 {
-	
-	private static int n = 0;
-	private static int k = 0;
-	public static void main(String[] args) throws IOException {
-		Scanner scanner = new Scanner(System.in);
-		n = scanner.nextInt();
-		k = scanner.nextInt();
+	static long result = 0 ;
+	static int n = 0;
+	static int k = 0;
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		k = sc.nextInt();
 	
 		long left = 1;
 		long right = k;
 		
 		System.out.println(bSearch(left, right));
 	}
-
-	private static long result = 0 ;
-    private static long bSearch(long left, long right) {
+    public static long bSearch(long left, long right) {
         int cnt = 0;
         long mid = (left + right) / 2;
         if(left > right) {
