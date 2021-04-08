@@ -1,5 +1,10 @@
 import java.util.Arrays;
 import java.util.Scanner;
+/*
+ * Date 2021.04.08
+ * author 장수제
+ * 외판원 알고리즘 코드정리
+ */
 
 public class Ans_Tsp {
 	static int n;
@@ -8,9 +13,9 @@ public class Ans_Tsp {
 	static boolean visited[];
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
-		n = sc.nextInt();
-		arr = new int[n][n];
-		visited = new boolean[n];
+		n = sc.nextInt();						//노드의 갯수
+		arr = new int[n][n];					//노드에서 노드로 가는 길의 거리
+		visited = new boolean[n];				//노드방문판단여부 
 		
 		for(int i = 0 ; i < n ; i++) {
 			for(int j = 0 ; j < n ; j++) {
