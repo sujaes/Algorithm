@@ -145,4 +145,44 @@
 //        }
 //        return answer;
 //    }
-}
+//}
+
+
+
+//import java.util.*;
+//
+//class Solution {
+//    static PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+//    static PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
+//
+//    public int[] solution(String[] operations) {
+//        int[] answer = {0,0};
+//        
+//        for(int i = 0 ; i < operations.length; i++){
+//            if(operations[i].charAt(0) == 'I'){     //I일경우
+//                int value = Integer.parseInt(operations[i].substring(2,operations[i].length()));
+//                minHeap.add(value);
+//                maxHeap.add(value);
+//            }else{                                  //D일경우
+//                if(!maxHeap.isEmpty()){             //비어있지않은경우
+//                    int leng = operations[i].length();
+//                    String temp = operations[i].substring(2,leng);
+//                    if(temp.equals("1")){                  //최대값 삭제
+//                        int max = maxHeap.poll();
+//                        minHeap.remove(max);
+//                    }
+//                    else{
+//                        int min = minHeap.poll();   //최솟값 삭제
+//                        maxHeap.remove(min);       
+//                    }
+//                }
+//            }
+//        }
+//        if(!maxHeap.isEmpty()){
+//            answer[0] = maxHeap.poll();
+//            answer[1] = minHeap.poll();
+//        }
+//
+//        return answer;
+//    }
+//}
