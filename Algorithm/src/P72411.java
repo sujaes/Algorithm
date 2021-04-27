@@ -176,3 +176,89 @@
 //        for(int i=0; i<answer.length; i++) System.out.println(answer[i]);
 //    }
 //}
+
+
+
+
+
+
+//import java.util.*;
+//
+//class Solution {        
+//    public static boolean[] vistied = new boolean[20];        //orders 길이
+//    public static Map<String, Integer> map = new HashMap<String, Integer>();
+//    public static String[] solution(String[] orders, int[] course) {
+//        PriorityQueue<Menu> pq = new PriorityQueue<Menu>();
+//        List<String> list = new ArrayList<String>();
+//        //주문 순서 정렬
+//        for(int i=0; i<orders.length; i++) {
+//        	orders[i] = sortString(orders[i]);          //문자 순서대로 정렬
+//        }
+//        for(int i=0; i<course.length; i++) {            //코스갯수
+//            for(int j=0; j<orders.length; j++) {        //주문순서
+//                if(orders[j].length()<course[i]) {      //코스갯수가 더 크면 패스(가지치기)
+//                	continue;
+//                }
+//                comb("", 0, 0, course[i], orders[j]);  //
+//            }
+//            int max = Integer.MIN_VALUE;
+//            for(String key : map.keySet()) {
+//                int count = map.get(key);
+//                if(max<=count) {
+//                    max = count;
+//                    pq.add(new Menu(key, count));
+//                }
+//            }
+//            while(max!=1 && !pq.isEmpty()) {
+//                Menu menu = pq.poll();
+//                if(menu.count==max) list.add(menu.name);
+//                else break;
+//            }
+//            pq.clear();
+//            map.clear();
+//        }
+//        String[] answer = new String[list.size()];
+//        for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+//        Arrays.sort(answer);
+//        return answer;
+//    }
+//    public static void comb(String menu, int before, int count, int courseCount, String order) {  //-1,0,course[i]
+//        if(count==courseCount) {                    //고른 갯수가 코스갯수랑 같아지면
+//            if(map.containsKey(menu)){              //이미 있으면 +1
+//                map.put(menu, map.get(menu)+1);  
+//            }else{
+//                map.put(menu, 1);                   //없으면 1
+//            }
+//            return;
+//        }
+//        
+//        for(int i=before; i<order.length(); i++) {
+//            if(!vistied[i]) {
+//            	vistied[i] = true;
+//                comb(menu+order.charAt(i), i, count+1, courseCount, order);
+//                vistied[i] = false;
+//            }
+//        }
+//    }
+//    
+//    public static String sortString(String s) {
+//        char[] ch = s.toCharArray();
+//        Arrays.sort(ch);
+//        String res= "";
+//        for(int i=0; i<ch.length; i++){
+//            res += ch[i];
+//        }
+//        return res;
+//    }
+//    public static class Menu implements Comparable<Menu>{
+//        String name;
+//        int count;
+//        public Menu(String name, int count) {
+//            this.name = name;
+//            this.count = count;
+//        }
+//        public int compareTo(Menu o){
+//            return o.count - this.count;
+//        }
+//    }
+//}
