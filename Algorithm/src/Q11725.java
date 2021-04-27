@@ -92,7 +92,7 @@ public class Q11725 {
 
         for (int k = 1; k <=n ; k++) {
             if(!check[k]){
-                dfs(k);
+                dfs(k);					//1부터시작
             }
         }
         for (int i = 2; i <=n ; i++) {
@@ -106,10 +106,10 @@ public class Q11725 {
             return;
         }
         check[v] =true;
-        for (int vv: list[v]) {
-            if(!check[vv]){
-                parents[vv] = v;
-                dfs(vv);
+        for (int vv: list[v]) {						//연결된 애들
+            if(!check[vv]){							//연결된애들 
+                parents[vv] = v;					//이전노드가 부모노드
+                dfs(vv);							//다음노드 탐색
             }
 
         }
