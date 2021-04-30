@@ -1,5 +1,3 @@
-
-//9012¹ø ¹®Á¦
 import java.util.*;
 class Q9012{
 	public static void main(String[] args){
