@@ -43,12 +43,12 @@
 //public class Q2812{
 //	public static void main(String[] args){
 //		Scanner sc = new Scanner(System.in);
-//		int n = sc.nextInt();
-//	    int k = sc.nextInt();
-//	    int t = 0;
+//		int n = sc.nextInt();	//숫자자리수
+//	    int k = sc.nextInt();	//뺄수
+//	    int t = 0;				
 //	    char c;
 //	    char s[] = new char[n];
-//		String str = sc.next();
+//		String str = sc.next();	//들어온수
 //		while(n-- > 0){
 //			do{
 //				c = str.charAt(str.length()-n-1);
@@ -79,26 +79,23 @@ public class Q2812 {
         Stack<Character> stack = new Stack<Character>();
         stack.push(number.charAt(0));
         int cnt = 0;
-        boolean flag = true;
+        boolean flag = true;							//숫자 빼는지 확인하는 플래그
         for (int i = 1; i < number.length(); i++) {
-            char ch = number.charAt(i);
+            char c = number.charAt(i);
             
             while (!stack.isEmpty() && flag) {
-                if (cnt == k) {
+                if (cnt == k) {							//숫자를 다빼면
                     flag = false;
                     break;
                 }
-                // 스택에 들어있는 값보다 ch가 큰 경우 제거
-                if (stack.peek() < ch) {
+                if (stack.peek() < c) {               	// 스택에 들어있는 값보다 c가 큰 경우 기존값 제거
                     stack.pop();
                     cnt += 1;
-                } 
-                // 반대인 경우 반복문 탈출
-                else if (stack.peek() >= ch) {
+                }else if (stack.peek() >= c) {			//작은경우 빠져나오기
                     break;
                 }   
-            }   
-            stack.push(ch);    
+            }
+            stack.push(c);    
         }
         StringBuilder sb = new StringBuilder();
         // 반복문을 돌았지만 제거해야될 숫자 갯수를 충족하지 못할 경우
