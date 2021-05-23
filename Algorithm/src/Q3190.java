@@ -3,7 +3,7 @@ public class Q3190{
     public static int[][] map = new int[101][101];
     public static int[] dx = {-1, 0, 1, 0}; // 북, 동, 남, 서
     public static int[] dy = {0, 1, 0, -1};
-    public static Deque<Point> q = new LinkedList<Point>();
+    public static Deque<Node> q = new LinkedList<Node>();
     public static int n, l, answer = 0;
     public static int[] time;
     public static String[] direction;
@@ -26,29 +26,29 @@ public class Q3190{
             direction[i] = sc.next();
         }
 
-        q.add(new Point(1, 1));
+        q.add(new Node(1, 1));
         map[1][1] = 1;
 
-        playGame(1, 1, 1);
+        play(1, 1, 1);
 
         System.out.println(answer);
     }
 
-    public static void playGame(int x, int y, int d) {
-        int i = 0;
+    public static void play(int x, int y, int d) {
+        int t = 0;
         while (true) {
-            if (i < l && answer == time[i]) {
-                if (direction[i].equals("D")) { // 우회전
+            if (t < l && answer == time[t]) {
+                if (direction[t].equals("D")) { // 우회전
                     d = (d + 1) % 4;
-                } else if (direction[i].equals("L")) {  // 좌회전
+                } else if (direction[t].equals("L")) {  // 좌회전
                     d = (d + 3) % 4;
                 }
-                i++;
+                t++;
             }
 
             int nx = x + dx[d];
             int ny = y + dy[d];
-            q.addFirst(new Point(nx,ny));   // 머리를 다음칸에 위치
+            q.addFirst(new Node(nx,ny));   // 머리를 다음칸에 위치
 
             if (nx <= 0 || ny <= 0 || nx > n || ny > n) {   // 밖으로 나가는 경우
                 answer++;
@@ -71,10 +71,10 @@ public class Q3190{
             answer++;
         }
     }
-    public static class Point{
+    public static class Node{
     	int x;
     	int y;
-    	public Point(int x, int y) {
+    	public Node(int x, int y) {
     		this.x = x;
     		this.y = y; 
     	}
