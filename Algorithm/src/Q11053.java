@@ -1,6 +1,5 @@
 import java.util.*;
-
-public class Q11053{	//범위 1000까지 n^3까지 가능
+class Q11053{	//범위 1000까지 n^3까지 가능
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int n=sc.nextInt();
