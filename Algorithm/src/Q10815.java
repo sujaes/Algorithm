@@ -25,7 +25,7 @@ public class Q10815 {
             int min = -1; 
             int middle = 0; 
             
-            while(max - min > 1){
+            while(max - min > 1){  // 두개 사이에 값이있어야 도는거임
 //            	System.out.print("min = " + min + " max = "+ max + " middle = " + middle);
                 middle = (min+max)/2; 
                 if(comArr[i] == arr[middle]){
