@@ -19,8 +19,10 @@ public class Q9465 {
 			for(int k = 2; k <= n; k++) {
 //				System.out.println(dp[k-1][1] + " " +dp[k-2][1] + " " + arr[k][0] );
 //				System.out.println(dp[k-1][0] + " " +dp[k-2][0] + " " + arr[k][1] );
-				dp[k][0] = Math.max(dp[k-1][1], dp[k-2][1]) + arr[k][0];
-				dp[k][1] = Math.max(dp[k-1][0], dp[k-2][0]) + arr[k][1];
+//				dp[k][0] = Math.max(dp[k-1][1], dp[k-2][1]) + arr[k][0];
+//				dp[k][1] = Math.max(dp[k-1][0], dp[k-2][0]) + arr[k][1];
+//				dp[k][0] = Math.max(Math.max(dp[k-1][1], dp[k-2][0]),dp[k-2][1]) + arr[k][0];
+//				dp[k][1] = Math.max(Math.max(dp[k-1][0], dp[k-2][1]),dp[k-2][0]) + arr[k][1];
 			}
 			System.out.println(Math.max(dp[n][0],dp[n][1]));
 		}
